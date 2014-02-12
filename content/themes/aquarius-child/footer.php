@@ -25,9 +25,18 @@
 		</div>
 		<?php } ?>
 		<div id="credits">
-			<span>
-			<?php printf( __( '&copy; %s %s', 'aquarius' ), date('Y'), get_bloginfo('name')); ?>
-			</span>
+			<div class="inside">
+				<div class="one-half half-padding-h">
+					<span>
+					<?php printf( __( '&copy; %s %s', 'aquarius' ), date('Y'), get_bloginfo('name')); ?>
+					</span>
+				</div>
+				<div class="one-half half-padding-h">
+					<span>
+						<?php printf( __( '%s &amp; %s', 'aquarius' ), '<a href="http://www.wordpress.org/" title="WordPress"><img src="'. get_stylesheet_directory_uri() .'/assets/images/wpmini-blue.png" alt="(W)" title="" width="16px" height="16px" /></a>', '<a href="http://wplovin.com/aquarius/" title="Aquarius theme by wplovin"><i class="fa fa-heart"></i></a>' ); ?>
+					</span>
+				</div>
+			</div>
 		</div>
 	</footer>
 
