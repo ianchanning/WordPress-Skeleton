@@ -11,13 +11,14 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'DB_USER', 'db152024_zwarte' );
 	define( 'DB_PASSWORD', 'tip-darkness-no-fear' );
 	define( 'DB_HOST', $_ENV['DATABASE_SERVER'] ); // Probably 'localhost'
+	
+	// ========================
+	// Custom Content Directory
+	// ========================
+	define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
+	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
 }
 
-// ========================
-// Custom Content Directory
-// ========================
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/zwartearend.be/content' );
 
 // ================================================
 // You almost certainly do not want to change these
