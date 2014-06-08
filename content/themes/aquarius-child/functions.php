@@ -34,3 +34,26 @@ function icc_aquarius_child_new_customer_registered_send_email_admin($user_login
 	);
 }
 add_action('new_customer_registered', 'icc_aquarius_child_new_customer_registered_send_email_admin');
+
+/**
+ * Send email to admin when a customer registers
+ * 
+ * http://stackoverflow.com/questions/14343928/woocommerce-new-customer-admin-notification-email
+ * 
+ * @param string $user_id
+ */
+function icc_aquarius_child_customer_save_address_send_email_admin($user_id, $load_address) {
+	ob_start();
+	do_action('woocommerce_email_header', 'Customer address saved');
+	$email_header = ob_get_clean();
+	ob_start();
+	do_action('woocommerce_email_footer');
+	$email_footer = ob_get_clean();
+
+	woocommerce_mail(
+		get_bloginfo('admin_email'),
+		get_bloginfo('name').' - Customer address saved',
+		$email_header.'<p>The user '.esc_html( $user_id ).' is registered to the website</p>'.$email_footer
+	);
+}
+add_action('woocommerce_customer_save_address', 'icc_aquarius_child_customer_save_address_send_email_admin');
