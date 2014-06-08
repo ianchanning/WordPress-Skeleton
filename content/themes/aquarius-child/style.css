@@ -36,3 +36,26 @@
 	padding-bottom: 30px;
 	padding-top: 30px;
 }
+
+#content-main .product .entry-content h1 {
+    font-size: 3em;
+}
+#content-main .product .entry-content h2 {
+    font-size: 2.5em;
+}
+#content-main .product .entry-content h3 {
+    font-size: 2em;
+}
+#content-main .product .entry-content h4 {
+    font-size: 1.5em;
+}
+#content-main .product .entry-content h5 {
+    font-size: 1em;
+}
+#content-main .post .entry-content h6, #content-main .page .entry-content h6, #content-main .attachment .entry-content h6 {
+    font-size: 0.75em;
+}
+#content-main .product .entry-content h1, #content-main .product .entry-content h2, #content-main .product .entry-content h3, #content-main .product .entry-content h4, #content-main .product .entry-content h5, #content-main .product .entry-content h6 {
+    color: #383838;
+    margin: 45px auto;
+}
