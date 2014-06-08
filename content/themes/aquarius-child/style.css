@@ -18,3 +18,21 @@
 .birs_form_field.birs_client_section 
 {display: none;}
 #birs_appointment_form .birs_form_field > label {font-weight: normal;}
+
+/**
+ * WooCommerce overrides
+ */
+#content-main .product {
+	overflow: hidden;
+	position: relative;
+	z-index: 20;
+}
+
+#content-main .product .entry-header h1, #content-main .product .entry-header h1 a {
+	color: #333333;
+}
+#content-main .product .entry-header h1 {
+	font-size: 2.427em;
+	padding-bottom: 30px;
+	padding-top: 30px;
+}

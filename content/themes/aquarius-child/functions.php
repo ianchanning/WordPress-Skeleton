@@ -33,7 +33,7 @@ function icc_aquarius_child_new_customer_registered_send_email_admin($user_login
 		$email_header.'<p>The user '.esc_html( $user_login ).' is registered to the website</p>'.$email_footer
 	);
 }
-add_action('new_customer_registered', 'icc_aquarius_child_new_customer_registered_send_email_admin');
+// add_action('new_customer_registered', 'icc_aquarius_child_new_customer_registered_send_email_admin');
 
 /**
  * Send email to admin when a customer registers
@@ -56,4 +56,33 @@ function icc_aquarius_child_customer_save_address_send_email_admin($user_id, $lo
 		$email_header.'<p>The user '.esc_html( $user_id ).' is registered to the website</p>'.$email_footer
 	);
 }
-add_action('woocommerce_customer_save_address', 'icc_aquarius_child_customer_save_address_send_email_admin');
+// add_action('woocommerce_customer_save_address', 'icc_aquarius_child_customer_save_address_send_email_admin');
+
+/**
+ * @link http://docs.woothemes.com/document/third-party-custom-theme-compatibility/ 
+ */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+add_action('woocommerce_before_main_content', 'icc_aquarius_child_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'icc_aquarius_child_wrapper_end', 10);
+
+function icc_aquarius_child_wrapper_start() {
+	echo '<section id="content-main"><div class="inside full-padding">';
+}
+
+function icc_aquarius_child_wrapper_end() {
+	echo '</div></section>';
+}
+
+function icc_aquarius_child_before_main_content() {
+	echo '<div class="inside full-padding">';
+}
+
+function icc_aquarius_child_after_main_content() {
+	echo '</div>';
+}
+
+// has the same affect as putting everything child_wrapper
+// add_action( 'woocommerce_before_main_content', 'icc_aquarius_child_before_main_content', 10 );
+// add_action( 'woocommerce_after_main_content', 'icc_aquarius_child_after_main_content', 10 );
