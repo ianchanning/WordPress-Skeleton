@@ -59,3 +59,75 @@
     color: #383838;
     margin: 45px auto;
 }
+
+input[type="submit"], input[type="reset"], input[type="button"], button {
+	background: none repeat scroll 0 0 #20ADCA;
+	border: medium none;
+	border-radius: 500em;
+	color: #F1F1F1;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 0.625em;
+	font-weight: bold;
+	padding: 20px 60px;
+	text-transform: uppercase;
+	transition: all 0.5s ease 0s;
+}
+
+
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover {
+	background: none repeat scroll 0 0 #19879E
+}
+
+.woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt {
+	background: none repeat scroll 0 0 #20ADCA;
+	border: medium none;
+	border-radius: 500em;
+	color: #F1F1F1;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 0.625em;
+	font-weight: bold;
+	padding: 20px 60px;
+	text-transform: uppercase;
+	transition: all 0.5s ease 0s;
+}
+
+.woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover {
+	background: none repeat scroll 0 0 #19879E
+}
+
+.woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt {
+	text-shadow: none;
+}
+
+.woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover {
+	text-shadow: none;
+}
+
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button {
+	background: none repeat scroll 0 0 #B4B2AE;
+	border: medium none;
+	border-radius: 500em;
+	color: #F1F1F1;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 0.625em;
+	font-weight: bold;
+	padding: 20px 60px;
+	text-transform: uppercase;
+	transition: all 0.5s ease 0s;
+}
+
+.woocommerce #content input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce-page #content input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover {
+	background: none repeat scroll 0 0 #8A8885;
+}
+
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button {
+	text-shadow: none;
+}
+
+.woocommerce #content table.cart input, .woocommerce table.cart input, .woocommerce-page #content table.cart input, .woocommerce-page table.cart input {
+	padding: 12px 36px;
+}
+
+.woocommerce #content table.cart input.button.alt, .woocommerce #respond table.cart input#submit.alt, .woocommerce table.cart a.button.alt, .woocommerce table.cart button.button.alt, .woocommerce table.cart input.button.alt, .woocommerce-page #content table.cart input.button.alt, .woocommerce-page #respond table.cart input#submit.alt, .woocommerce-page table.cart a.button.alt, .woocommerce-page table.cart button.button.alt, .woocommerce-page table.cart input.button.alt {
+	padding: 12px 36px;
+}
