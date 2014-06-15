@@ -12,7 +12,7 @@
 @import url(assets/fanwood-webfonts/stylesheet.css);
 #header-main #logo {font-family: Fanwood,"Helvetica Neue",Helvetica,Arial,sans-serif;}
 /** @link http://www.birchpress.com/support/faq#hide_location_service_staff */
-.birs_form_field.birs_appointment_service, 
+/* .birs_form_field.birs_appointment_service, */
 .birs_form_field.birs_appointment_staff,
 .birs_form_field.birs_appointment_section,
 .birs_form_field.birs_client_section 
