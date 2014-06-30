@@ -25,7 +25,8 @@
 	padding: 0px;
 	margin: 3px;
 	font-size: 12px;
-	line-height:20px;
+	/*line-height:20px;*/
+	float: left;
 }
 
 #pm-header .avatar
