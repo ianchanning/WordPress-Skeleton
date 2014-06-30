@@ -129,7 +129,7 @@
 
 #pm-content a
 {
-	color: navy;
+	/* color: navy; */
 	text-decoration: underline;
 }
 
@@ -207,7 +207,7 @@ pre.code
 
 #results li
 {
-	border-top: solid 1px #e4dcd4;
+	border-bottom: 1px dashed #e4dcd4;;
 }
 
 #results li a

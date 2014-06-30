@@ -853,17 +853,19 @@ if (!class_exists("cartpaujPM"))
       global $user_ID;
       $adminOps = $this->getAdminOps();
 
-      $menu = "<div id='pm-menu'>";
-      $menu .= "<a href='".$this->pageURL."'>".__("Message Box", "cartpaujpm")."</a> | ";
-      $menu .= "<a href='".$this->actionURL."viewannouncements'>".__("Announcements", "cartpaujpm")."</a> | ";
-      $menu .= "<a href='".$this->actionURL."newmessage'>".__("New Message", "cartpaujpm")."</a> | ";
+      $menu = "<div id='pm-menu' class='woocommerce-tabs'>";
+      $menu .= "<ul class='tabs'>";
+      $menu .= "<li><a href='".$this->pageURL."'>".__("Message Box", "cartpaujpm")."</a></li>";
+      $menu .= "<li><a href='".$this->actionURL."viewannouncements'>".__("Announcements", "cartpaujpm")."</a></li>";
+      $menu .= "<li><a href='".$this->actionURL."newmessage'>".__("New Message", "cartpaujpm")."</a></li>";
 
       // Disallow directory if there is a messaging administrator and this person is not it.
       if (!$this->admin_user_id || $this->admin_user_id == $user_ID) {
-        $menu .= "<a href='" . $this->actionURL . "directory'>" . __("Directory", "cartpaujpm") . "</a> | ";
+        $menu .= "<li><a href='" . $this->actionURL . "directory'>" . __("Directory", "cartpaujpm") . "</a></li>";
       }
 
-      $menu .= "<a href='".$this->actionURL."settings'>".__("Settings", "cartpaujpm")."</a>";
+      $menu .= "<li><a href='".$this->actionURL."settings'>".__("Settings", "cartpaujpm")."</a></li>";
+      $menu .= "</ul>";
       $menu .= "</div>";
       $menu .= "<div id='pm-content'>";
       return $menu;
