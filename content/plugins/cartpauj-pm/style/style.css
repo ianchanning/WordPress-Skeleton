@@ -49,7 +49,7 @@
 {
 	font-size: 14px;
 	font-weight: bold;
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 /*Notify Styling*/
@@ -131,7 +131,7 @@
 #pm-content a
 {
 	/* color: navy; */
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 #pm-content small
@@ -185,7 +185,7 @@ pre.code
 
 #pm-footer a, #pm-footer a:hover, #pm-footer a:visited
 {
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 /*Auto-suggest*/
