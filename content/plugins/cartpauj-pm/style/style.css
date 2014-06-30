@@ -23,7 +23,7 @@
 #pm-header p
 {
 	padding: 0px;
-	margin: 3px;
+	/* margin: 3px; */
 	font-size: 12px;
 	/*line-height:20px;*/
 	float: left;
