@@ -184,7 +184,7 @@ if (!class_exists("cartpaujPM"))
           <tr><td colspan='2'><span><input class='button' type='submit' name='pm-admin-save' value='".__("Save Options", "cartpaujpm")."' /></span></td></tr>
           </table>
           </form>
-          <p><strong>".__("Setup Instructions", "cartpaujpm").":</strong></p>
+          <h3>".__("Setup Instructions", "cartpaujpm")."</h3>
           <p><ul><li>".__("Create a new page.", "cartpaujpm")."</li>
           <li>".__("Paste [cartpauj-pm] under the HTML tab of the page editor", "cartpaujpm")."</li>
           <li>".__("Publish the page", "cartpaujpm")."</li>
@@ -236,7 +236,7 @@ if (!class_exists("cartpaujPM"))
       if ($this->pmUserSave())
         $this->notify = __("Your settings have been saved!", "cartpaujpm");
       $viewUserOps = $this->getUserOps($user_ID); //Get current options
-      $prefs = "<p><strong>".__("Set your preferences below", "cartpaujpm").":</strong></p>
+      $prefs = "<h3>".__("Set your preferences below", "cartpaujpm")."</h3>
       <form id='pm-user-save-form' name='pm-user-save-form' method='post' action=''>
       <input type='checkbox' name='allow_messages' value='true'";
       if($viewUserOps['allow_messages'] == 'true')
@@ -293,7 +293,7 @@ if (!class_exists("cartpaujPM"))
       $adminOps = $this->getAdminOps();
       if (!$this->isBoxFull($user_ID, $adminOps['num_messages'], '1'))
       {
-        $newMsg = "<p><strong>".__("Create New Message", "cartpaujpm").":</strong></p>";
+        $newMsg = "<h3>".__("Create New Message", "cartpaujpm")."</h3>";
         $newMsg .= "<form name='message' action='{$this->actionURL}checkmessage' method='post' enctype='multipart/form-data'>";
 
         // Disallow recipient field if there is a messaging administrator and this person is not it.
@@ -325,8 +325,8 @@ if (!class_exists("cartpaujPM"))
       }
       else
       {
-        $error = "<p><strong>".__("Message Error", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+        $error = "<h3>".__("Message Error", "cartpaujpm")."</h3>
+        <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
         $this->notify = __("You cannot send messages because your message box is full!", "cartpaujpm");
         return $error;
       }
@@ -341,7 +341,7 @@ if (!class_exists("cartpaujPM"))
       $pID = $_GET['id'];
       $wholeThread = $this->getWholeThread($pID);
 
-      $threadOut = "<p><strong>".__("Message Thread", "cartpaujpm").":</strong></p>
+      $threadOut = "<h3>".__("Message Thread", "cartpaujpm")."</h3>
       <table><tr><th width='15%'>".__("Sender", "cartpaujpm")."</th><th width='85%'>".__("Message", "cartpaujpm")."</th></tr>";
 
       foreach ($wholeThread as $post)
@@ -349,8 +349,8 @@ if (!class_exists("cartpaujPM"))
         //Check for privacy errors first
         if ($post->to_user != $user_ID && $post->from_user != $user_ID)
         {
-          $error = "<p><strong>".__("Privacy Error", "cartpaujpm").":</strong></p>
-          <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+          $error = "<h3>".__("Privacy Error", "cartpaujpm")."</h3>
+          <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
           $this->notify = __("You do not have permission to view this message!", "cartpaujpm");
           return $error;
         }
@@ -397,7 +397,7 @@ if (!class_exists("cartpaujPM"))
 
       //SHOW THE REPLY FORM
       $threadOut .= "</table>
-      <p><strong>".__("Add Reply", "cartpaujpm")."</strong></p>
+      <h3>".__("Add Reply", "cartpaujpm")."</h3>
       <form name='message' action='{$this->actionURL}checkmessage' method='post' enctype='multipart/form-data'>" .
       $this->get_form_buttons() . "<br/>
       <textarea name='message_content'></textarea>
@@ -467,22 +467,22 @@ if (!class_exists("cartpaujPM"))
           $theError = __("You must enter some message content!", "cartpaujpm");
         if ($from != $user_ID)
           $theError = __("You do not have permission to send this message!", "cartpaujpm");
-        $error = "<p><strong>".__("Message Error", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+        $error = "<h3>".__("Message Error", "cartpaujpm")."</h3>
+        <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
         $this->notify = $theError;
         return $error;
       }
       if ($toUserOps['allow_messages'] != 'true')
       {
-        $error = "<p><strong>".__("Message Error", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+        $error = "<h3>".__("Message Error", "cartpaujpm")."</h3>
+        <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
         $this->notify = __("This user does not want to receive messages!", "cartpaujpm");
         return $error;
       }
       if ($this->isBoxFull($to, $adminOps['num_messages'], $parentID))
       {
-        $error = "<p><strong>".__("Message Error", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+        $error = "<h3>".__("Message Error", "cartpaujpm")."</h3>
+        <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
         $this->notify = __("The Recipients Message Box Is Full!", "cartpaujpm");
         return $error;
       }
@@ -533,8 +533,8 @@ if (!class_exists("cartpaujPM"))
         }
       }
 
-      $check = "<p><strong>".__("Message Sent", "cartpaujpm").":</strong></p>
-      <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+      $check = "<h3>".__("Message Sent", "cartpaujpm")."</h3>
+      <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
       $this->notify = __("Your message was successfully sent!", "cartpaujpm");
 
       $this->sendEmail($to, $from);
@@ -596,11 +596,11 @@ if (!class_exists("cartpaujPM"))
       $numMsgs = $this->getUserNumMsgs();
       if ($numMsgs)
       {
-        $msgsOut = "<p><strong>".__("Your Messages", "cartpaujpm").":</strong></p>";
+        $msgsOut = "<h3>".__("Your Messages", "cartpaujpm")."</h3>";
         $numPgs = $numMsgs / $adminOps['messages_page'];
         if ($numPgs > 1)
         {
-          $msgsOut .= "<p><strong>".__("Page", "cartpaujpm").": </strong> ";
+          $msgsOut .= "<h3>".__("Page", "cartpaujpm").": </strong> ";
           for ($i = 0; $i < $numPgs; $i++)
             if ($_GET['pmpage'] != $i)
               $msgsOut .= "<a href='".$this->actionURL."messagebox&pmpage=".$i."'>".($i+1)."</a> ";
@@ -636,8 +636,8 @@ if (!class_exists("cartpaujPM"))
       }
       else
       {
-        $empty = "<p><strong>".__("No Messages", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."'>".__("Refresh Message Box", "cartpaujpm")."</a></strong></p>";
+        $empty = "<h3>".__("No Messages", "cartpaujpm")."</h3>
+        <h3><a href='".$this->pageURL."'>".__("Refresh Message Box", "cartpaujpm")."</a></h3>";
         $this->notify = __("Your message box is empty!", "cartpaujpm");
         return $empty;
       }
@@ -692,8 +692,8 @@ if (!class_exists("cartpaujPM"))
         }
       }
 
-      $deleted = "<p><strong>".__("Message Deleted", "cartpaujpm").":</strong></p>
-      <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+      $deleted = "<h3>".__("Message Deleted", "cartpaujpm")."</h3>
+      <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
       $this->notify = __("Your message was successfully deleted!", "cartpaujpm");
 
       return $deleted;
@@ -714,23 +714,23 @@ if (!class_exists("cartpaujPM"))
 
       if ($this->addAnnouncement()) //Adding a new announcement?
       {
-        $announce = "<p><strong>".__("Announcement Added", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></strong></p>";
+        $announce = "<h3>".__("Announcement Added", "cartpaujpm")."</h3>
+        <h3><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></h3>";
         $this->notify = __("The announcement was successfully added!", "cartpaujpm");
         return $announce;
       }
 
       if ($this->deleteAnnouncement()) //Deleting an announcement?
       {
-        $announce = "<p><strong>".__("Announcement Deleted", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></strong></p>";
+        $announce = "<h3>".__("Announcement Deleted", "cartpaujpm")."</h3>
+        <h3><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></h3>";
         $this->notify = __("The announcement was successfully deleted!", "cartpaujpm");
         return $announce;
       }
 
       if (!$num) //Just viewing announcements
       {
-        $announce = "<p><strong>".__("Announcements", "cartpaujpm").":</strong></p>";
+        $announce = "<h3>".__("Announcements", "cartpaujpm")."</h3>";
         if (current_user_can('level_9'))
         {
           $announce .= $this->dispAnnounceForm();
@@ -739,7 +739,7 @@ if (!class_exists("cartpaujPM"))
       }
       else
       {
-        $announce = "<p><strong>".__("Announcements", "cartpaujpm").":</strong></p>";
+        $announce = "<h3>".__("Announcements", "cartpaujpm")."</h3>";
         if (current_user_can('level_9'))
         {
           $announce .= $this->dispAnnounceForm();
@@ -766,7 +766,7 @@ if (!class_exists("cartpaujPM"))
     {
       $form = "<p>".__("Add a new announcement below", "cartpaujpm")."</p>
       <form name='message' action='' method='post'>
-      ".__("Subject", "cartpaujpm").":<br/>
+      <label for='message_title'>".__("Subject", "cartpaujpm")."</label><br/>
       <input type='text' name='message_title' value='' /><br/>".
       $this->get_form_buttons()."<br/>
       <textarea name='message_content'></textarea>
@@ -838,7 +838,7 @@ if (!class_exists("cartpaujPM"))
       // ICC hack to add in woocommerce tabs
 	  $header = "<div id='pm-wrapper' class='woocommerce'>";
       $header .= "<div id='pm-header'>";
-      $header .= get_avatar($user_ID, 60)."<p><strong>".__("Welcome", "cartpaujpm").": ".$user_login."</strong><br/>";
+      $header .= get_avatar($user_ID, 60)."<h3>".__("Welcome", "cartpaujpm").": ".$user_login."</strong><br/>";
       $header .= __("You have", "cartpaujpm")." (<font color='red'>".$numNew."</font>) ".__("new messages", "cartpaujpm").
       " ".__("and", "cartpaujpm")." (".$numAnn.") ".__("announcement(s)", "cartpaujpm")."<br/>";
       if ($msgBoxTotal == __("Unlimited", "cartpaujpm") || $msgBoxSize < $msgBoxTotal)
@@ -921,7 +921,7 @@ if (!class_exists("cartpaujPM"))
 
       foreach($users as $u)
       {
-        $directory .= '<p><strong>'.$u->user_login.'</strong> - <a href="'.$this->actionURL.'newmessage&to='.$u->ID.'">'.__('Send Message', 'cartpaujpm').'</a></p>';
+        $directory .= '<h3>'.$u->user_login.'</strong> - <a href="'.$this->actionURL.'newmessage&to='.$u->ID.'">'.__('Send Message', 'cartpaujpm').'</a></p>';
       }
       return $directory;
     }
@@ -976,7 +976,7 @@ if (!class_exists("cartpaujPM"))
       }
       else
       {
-        $out = "<p><strong>".__("You must be logged-in to view this page.", "cartpaujpm")."</strong></p>";
+        $out = "<h3>".__("You must be logged-in to view this page.", "cartpaujpm")."</h3>";
       }
       return $out;
     }
