@@ -12,9 +12,144 @@
 @import url(assets/fanwood-webfonts/stylesheet.css);
 #header-main #logo {font-family: Fanwood,"Helvetica Neue",Helvetica,Arial,sans-serif;}
 /** @link http://www.birchpress.com/support/faq#hide_location_service_staff */
-.birs_form_field.birs_appointment_service, 
+/* .birs_form_field.birs_appointment_service, */
 .birs_form_field.birs_appointment_staff,
 .birs_form_field.birs_appointment_section,
 .birs_form_field.birs_client_section 
 {display: none;}
 #birs_appointment_form .birs_form_field > label {font-weight: normal;}
+
+/**
+ * WooCommerce overrides
+ */
+#content-main .product {
+	overflow: hidden;
+	position: relative;
+	z-index: 20;
+}
+
+#content-main .product .entry-header h1, #content-main .product .entry-header h1 a {
+	color: #333333;
+}
+#content-main .product .entry-header h1 {
+	font-size: 2.427em;
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+#content-main .product .entry-content h1 {
+    font-size: 3em;
+}
+#content-main .product .entry-content h2 {
+    font-size: 2.5em;
+}
+#content-main .product .entry-content h3 {
+    font-size: 2em;
+}
+#content-main .product .entry-content h4 {
+    font-size: 1.5em;
+}
+#content-main .product .entry-content h5 {
+    font-size: 1em;
+}
+#content-main .post .entry-content h6, #content-main .page .entry-content h6, #content-main .attachment .entry-content h6 {
+    font-size: 0.75em;
+}
+#content-main .product .entry-content h1, #content-main .product .entry-content h2, #content-main .product .entry-content h3, #content-main .product .entry-content h4, #content-main .product .entry-content h5, #content-main .product .entry-content h6 {
+    color: #383838;
+    margin: 45px auto;
+}
+
+/**
+ * Get all buttons to match Aquarius theme styles
+ */
+input[type="submit"], input[type="reset"], input[type="button"], button {
+	background: none repeat scroll 0 0 #20ADCA;
+	border: medium none;
+	border-radius: 500em;
+	color: #F1F1F1;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 0.625em;
+	font-weight: bold;
+	padding: 20px 60px;
+	text-transform: uppercase;
+	transition: all 0.5s ease 0s;
+}
+
+
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover {
+	background: none repeat scroll 0 0 #19879E
+}
+
+/**
+ * Get WooCommerce buttons to match Aquarius theme styles
+ */
+.woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt {
+	background: none repeat scroll 0 0 #20ADCA;
+	border: medium none;
+	border-radius: 500em;
+	color: #F1F1F1;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 0.625em;
+	font-weight: bold;
+	padding: 20px 60px;
+	text-transform: uppercase;
+	transition: all 0.5s ease 0s;
+}
+
+.woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover {
+	background: none repeat scroll 0 0 #19879E
+}
+
+.woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt {
+	text-shadow: none;
+}
+
+.woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover {
+	text-shadow: none;
+}
+
+/**
+ * Create new Aquarius theme button to match WooCommerce buttons default buttons
+ */
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button {
+	background: none repeat scroll 0 0 #B4B2AE;
+	border: medium none;
+	border-radius: 500em;
+	color: #F1F1F1;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 0.625em;
+	font-weight: bold;
+	padding: 20px 60px;
+	text-transform: uppercase;
+	transition: all 0.5s ease 0s;
+}
+
+/**
+ * Darken the hover style to match the similar value (HSV) change as for aquarius button hover
+ */
+.woocommerce #content input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce-page #content input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover {
+	background: none repeat scroll 0 0 #8A8885;
+}
+
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button {
+	text-shadow: none;
+}
+
+/**
+ * Fix cart button padding to match the smaller font size
+ */
+.woocommerce #content table.cart input, .woocommerce table.cart input, .woocommerce-page #content table.cart input, .woocommerce-page table.cart input {
+	padding: 12px 36px;
+}
+
+.woocommerce #content table.cart input.button.alt, .woocommerce #respond table.cart input#submit.alt, .woocommerce table.cart a.button.alt, .woocommerce table.cart button.button.alt, .woocommerce table.cart input.button.alt, .woocommerce-page #content table.cart input.button.alt, .woocommerce-page #respond table.cart input#submit.alt, .woocommerce-page table.cart a.button.alt, .woocommerce-page table.cart button.button.alt, .woocommerce-page table.cart input.button.alt {
+	padding: 12px 36px;
+}
+
+/**
+ * Fix for arrow under Bank Overschrijving
+ */
+.woocommerce #payment div.payment_box:after, .woocommerce-page #payment div.payment_box:after {
+	margin: -0.6em 0 0 2em;
+}
