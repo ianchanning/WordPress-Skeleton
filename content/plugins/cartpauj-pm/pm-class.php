@@ -835,7 +835,8 @@ if (!class_exists("cartpaujPM"))
       else
         $msgBoxTotal = $adminOps['num_messages'];
 
-      $header = "<div id='pm-wrapper'>";
+      // ICC hack to add in woocommerce tabs
+	  $header = "<div id='pm-wrapper' class='woocommerce'>";
       $header .= "<div id='pm-header'>";
       $header .= get_avatar($user_ID, 60)."<p><strong>".__("Welcome", "cartpaujpm").": ".$user_login."</strong><br/>";
       $header .= __("You have", "cartpaujpm")." (<font color='red'>".$numNew."</font>) ".__("new messages", "cartpaujpm").
@@ -853,19 +854,33 @@ if (!class_exists("cartpaujPM"))
       global $user_ID;
       $adminOps = $this->getAdminOps();
 
-      $menu = "<div id='pm-menu' class='woocommerce-tabs'>";
+	  // ICC hack to add in WooCommerce tabs
+	  $menuActive = array(
+		  'default' => 'active', 
+		  'viewannouncements' => '', 
+		  'newmessage' => '', 
+		  'directory' => '', 
+		  'settings' => '', 
+	  );
+	  if (isset($menuActive[$_GET['pmaction']])) {
+		  $menuActive[$_GET['pmaction']] = 'active';
+		  $menuActive['default'] = '';
+	  }
+      $menu = "<div id='pm-menu' class='product'>";
+      $menu .= "<div class='woocommerce-tabs'>";
       $menu .= "<ul class='tabs'>";
-      $menu .= "<li><a href='".$this->pageURL."'>".__("Message Box", "cartpaujpm")."</a></li>";
-      $menu .= "<li><a href='".$this->actionURL."viewannouncements'>".__("Announcements", "cartpaujpm")."</a></li>";
-      $menu .= "<li><a href='".$this->actionURL."newmessage'>".__("New Message", "cartpaujpm")."</a></li>";
+      $menu .= "<li class='{$menuActive['default']}'><a href='".$this->pageURL."'>".__("Message Box", "cartpaujpm")."</a></li>";
+      $menu .= "<li class='{$menuActive['viewannouncements']}'><a href='".$this->actionURL."viewannouncements'>".__("Announcements", "cartpaujpm")."</a></li>";
+      $menu .= "<li class='{$menuActive['newmessage']}'><a href='".$this->actionURL."newmessage'>".__("New Message", "cartpaujpm")."</a></li>";
 
       // Disallow directory if there is a messaging administrator and this person is not it.
       if (!$this->admin_user_id || $this->admin_user_id == $user_ID) {
-        $menu .= "<li><a href='" . $this->actionURL . "directory'>" . __("Directory", "cartpaujpm") . "</a></li>";
+        $menu .= "<li class='{$menuActive['directory']}'><a href='" . $this->actionURL . "directory'>" . __("Directory", "cartpaujpm") . "</a></li>";
       }
 
-      $menu .= "<li><a href='".$this->actionURL."settings'>".__("Settings", "cartpaujpm")."</a></li>";
+      $menu .= "<li class='{$menuActive['settings']}'><a href='".$this->actionURL."settings'>".__("Settings", "cartpaujpm")."</a></li>";
       $menu .= "</ul>";
+      $menu .= "</div>";
       $menu .= "</div>";
       $menu .= "<div id='pm-content'>";
       return $menu;
