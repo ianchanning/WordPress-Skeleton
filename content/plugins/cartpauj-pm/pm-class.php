@@ -300,17 +300,19 @@ if (!class_exists("cartpaujPM"))
         if (!$this->admin_user_id || $this->admin_user_id == $user_ID) {
           $to = $_GET['to'];
           if (!$to) $to = 0;
-          $newMsg .= __("To", "cartpaujpm") . ":<br/>" .
-          "<input type='text' id='search-q' onkeyup='javascript:autosuggest(\"" .
-          $this->actionURL . "\")' name='message_to' autocomplete='off' value='" .
-          $this->convertToUser($to) . "' /><br/>";
+          $newMsg .=  sprintf('<label for="search-q">%s</label><br/>', __("To", "cartpaujpm")) .
+          sprintf(
+		    "<input type='text' id='search-q' onkeyup='javascript:autosuggest(\"%s\")' name='message_to' autocomplete='off' value='%s' /><br/>", 
+		    $this->actionURL,
+		    $this->convertToUser($to)
+		  );
         }
 
         $newMsg .= "<div id='results'></div>";
-        $newMsg .= __("Subject", "cartpaujpm").":<br/>
-        <input type='text' name='message_title' maxlength='65' value='' /><br/>".
-        __("Message", "cartpaujpm").":<br/>".$this->get_form_buttons()."<br/>
-        <textarea name='message_content'></textarea>
+        $newMsg .= sprintf('<label for="message_title">%s</label><br/>', __("Subject", "cartpaujpm"));
+        $newMsg .= "<input type='text' id='message_title' name='message_title' maxlength='65' value='' /><br/>";
+        $newMsg .= sprintf('<label for="message_title">%s</label><br/>%s<br/>', __("Message", "cartpaujpm"), $this->get_form_buttons());
+        $newMsg .= "<textarea name='message_content'></textarea>
         <input type='hidden' name='MAX_FILE_SIZE' value='64000000' />
         <input type='file' name='attachment[]' multiple='multiple' /><br />
         <input type='hidden' name='message_from' value='".$user_ID."' />
@@ -324,7 +326,7 @@ if (!class_exists("cartpaujPM"))
       else
       {
         $error = "<p><strong>".__("Message Error", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."' style='color:navy;'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+        <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
         $this->notify = __("You cannot send messages because your message box is full!", "cartpaujpm");
         return $error;
       }
@@ -348,7 +350,7 @@ if (!class_exists("cartpaujPM"))
         if ($post->to_user != $user_ID && $post->from_user != $user_ID)
         {
           $error = "<p><strong>".__("Privacy Error", "cartpaujpm").":</strong></p>
-          <p><strong><a href='".$this->pageURL."' style='color:navy;'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+          <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
           $this->notify = __("You do not have permission to view this message!", "cartpaujpm");
           return $error;
         }
@@ -395,7 +397,7 @@ if (!class_exists("cartpaujPM"))
 
       //SHOW THE REPLY FORM
       $threadOut .= "</table>
-      <p><strong>".__("Add Reply", "cartpaujpm").":</strong></p>
+      <p><strong>".__("Add Reply", "cartpaujpm")."</strong></p>
       <form name='message' action='{$this->actionURL}checkmessage' method='post' enctype='multipart/form-data'>" .
       $this->get_form_buttons() . "<br/>
       <textarea name='message_content'></textarea>
@@ -466,21 +468,21 @@ if (!class_exists("cartpaujPM"))
         if ($from != $user_ID)
           $theError = __("You do not have permission to send this message!", "cartpaujpm");
         $error = "<p><strong>".__("Message Error", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."' style='color:navy;'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+        <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
         $this->notify = $theError;
         return $error;
       }
       if ($toUserOps['allow_messages'] != 'true')
       {
         $error = "<p><strong>".__("Message Error", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."' style='color:navy;'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+        <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
         $this->notify = __("This user does not want to receive messages!", "cartpaujpm");
         return $error;
       }
       if ($this->isBoxFull($to, $adminOps['num_messages'], $parentID))
       {
         $error = "<p><strong>".__("Message Error", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."' style='color:navy;'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+        <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
         $this->notify = __("The Recipients Message Box Is Full!", "cartpaujpm");
         return $error;
       }
@@ -532,7 +534,7 @@ if (!class_exists("cartpaujPM"))
       }
 
       $check = "<p><strong>".__("Message Sent", "cartpaujpm").":</strong></p>
-      <p><strong><a href='".$this->pageURL."' style='color:navy;'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+      <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
       $this->notify = __("Your message was successfully sent!", "cartpaujpm");
 
       $this->sendEmail($to, $from);
@@ -635,7 +637,7 @@ if (!class_exists("cartpaujPM"))
       else
       {
         $empty = "<p><strong>".__("No Messages", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->pageURL."' style='color:navy;'>".__("Refresh Message Box", "cartpaujpm")."</a></strong></p>";
+        <p><strong><a href='".$this->pageURL."'>".__("Refresh Message Box", "cartpaujpm")."</a></strong></p>";
         $this->notify = __("Your message box is empty!", "cartpaujpm");
         return $empty;
       }
@@ -691,7 +693,7 @@ if (!class_exists("cartpaujPM"))
       }
 
       $deleted = "<p><strong>".__("Message Deleted", "cartpaujpm").":</strong></p>
-      <p><strong><a href='".$this->pageURL."' style='color:navy;'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
+      <p><strong><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></strong></p>";
       $this->notify = __("Your message was successfully deleted!", "cartpaujpm");
 
       return $deleted;
@@ -713,7 +715,7 @@ if (!class_exists("cartpaujPM"))
       if ($this->addAnnouncement()) //Adding a new announcement?
       {
         $announce = "<p><strong>".__("Announcement Added", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->actionURL."viewannouncements' style='color:navy;'>".__("Back To Announcements", "cartpaujpm")."</a></strong></p>";
+        <p><strong><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></strong></p>";
         $this->notify = __("The announcement was successfully added!", "cartpaujpm");
         return $announce;
       }
@@ -721,7 +723,7 @@ if (!class_exists("cartpaujPM"))
       if ($this->deleteAnnouncement()) //Deleting an announcement?
       {
         $announce = "<p><strong>".__("Announcement Deleted", "cartpaujpm").":</strong></p>
-        <p><strong><a href='".$this->actionURL."viewannouncements' style='color:navy;'>".__("Back To Announcements", "cartpaujpm")."</a></strong></p>";
+        <p><strong><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></strong></p>";
         $this->notify = __("The announcement was successfully deleted!", "cartpaujpm");
         return $announce;
       }
