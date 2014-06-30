@@ -9,7 +9,7 @@
 /*Header styling*/
 #pm-header
 {
-	border: 1px solid #333;
+	/*border: 1px solid #333;*/
 	height: 70px;
 	width: 100%;
 	color: white;
@@ -17,7 +17,6 @@
 
 #pm-header strong
 {
-	color: #333;
 	font-size: 20px;
 }
 
@@ -25,7 +24,6 @@
 {
 	padding: 0px;
 	margin: 3px;
-	color: #333;
 	font-size: 12px;
 	line-height:20px;
 }
@@ -41,7 +39,6 @@
 /*Menu Styling*/
 #pm-menu
 {
-	color: #333;
 	width: 100%;
 	font-size: 14px;
 	font-weight: bold;
@@ -49,7 +46,6 @@
 
 #pm-menu a, #pm-menu a:hover, #pm-menu a:visited
 {
-	color: #333;
 	font-size: 14px;
 	font-weight: bold;
 	text-decoration: underline;
@@ -58,14 +54,9 @@
 /*Notify Styling*/
 #pm-notify
 {
-	color: black;
-	background-color: #FFFF66;
-	border: 1px solid black;
-	height: 20px;
-	width: 100%;
-	text-align: center;
-	font-size: 12px;
-	font-weight: bold;
+    border: 1px dashed #e4dcd4;
+    margin-bottom: 30px;
+    padding: 15px;
 }
 
 /*Content styling*/
@@ -76,8 +67,7 @@
 	padding: 0px;
 	height: auto;
 	width: 100%;
-	border: 1px solid #333;
-	color: #333;
+	/*border: 1px solid #333;*/
 }
 
 #pm-content p, #pm-content form
@@ -112,14 +102,14 @@
 {
 	width: 100%;
 	border-collapse: collapse;
-	border: 0px;
+	/*border: 0px;*/
 	text-align: left;
 }
 
 #pm-content th, #pm-content td
 {
 	padding-left: 5px;
-	border: 1px solid #333;
+	/*border: 1px solid #333;*/
 	vertical-align: top;
 	white-space: pre-line;
 }
@@ -158,10 +148,9 @@
 
 #pm-content blockquote
 {
-	color: #666;
 	width: 90%;
 	background: #eee;
-	border: 1px solid #333;
+	border-left: 2px solid #e4dcd4;
 	padding-left: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -170,12 +159,16 @@
 pre.code
 {
 	width: 90%;
-	background: #eee;
-	border: solid 1px #ccc;
-	padding: 5px;
+	background: #f5f5f5;
+	color: #666;
+	font-family: monospace;
+	font-size: 14px;
+	margin: 20px 0;
 	overflow: auto;
+	padding: 20px;
+	white-space: pre;
 	white-space: pre-wrap;
-	font-size: 95%; /*If font is too small try increasing this*/
+	word-wrap: break-word;
 }
 
 /*Footer styling*/
@@ -183,14 +176,14 @@ pre.code
 {
 	text-align: center;
 	font-size: 10px;
-	border: 1px solid #333;
+	border-top: 1px solid #e4dcd4;
 	width: 100%;
 	color: #333;
+	padding: 5px;
 }
 
 #pm-footer a, #pm-footer a:hover, #pm-footer a:visited
 {
-	color: #333;
 	text-decoration: underline;
 }
 
@@ -198,7 +191,7 @@ pre.code
 #results
 {
 	width:250px;
-	border: solid 1px #333;
+	/*border: solid 1px #333;*/
 	display: none;
 	position: absolute;
 	background: white;
@@ -214,7 +207,7 @@ pre.code
 
 #results li
 {
-	border-top: solid 1px #333;
+	border-top: solid 1px #e4dcd4;
 }
 
 #results li a
@@ -222,7 +215,6 @@ pre.code
 	display: block;
 	padding: 5px;
 	text-decoration: none;
-	color: #333;
 	font-weight: normal;
 }
 
