@@ -838,8 +838,8 @@ if (!class_exists("cartpaujPM"))
       // ICC hack to add in woocommerce tabs
 	  $header = "<div id='pm-wrapper' class='woocommerce'>";
       $header .= "<div id='pm-header'>";
-      $header .= get_avatar($user_ID, 60)."<h3>".__("Welcome", "cartpaujpm").": ".$user_login."</h3>";
-      $header .= "<p>".__("You have", "cartpaujpm")." (<font color='red'>".$numNew."</font>) ".__("new messages", "cartpaujpm").
+      $header .= get_avatar($user_ID, 60)."<p><strong>".__("Welcome", "cartpaujpm").": ".$user_login."</strong><br/>";
+      $header .= __("You have", "cartpaujpm")." (<font color='red'>".$numNew."</font>) ".__("new messages", "cartpaujpm").
       " ".__("and", "cartpaujpm")." (".$numAnn.") ".__("announcement(s)", "cartpaujpm")."<br/>";
       if ($msgBoxTotal == __("Unlimited", "cartpaujpm") || $msgBoxSize < $msgBoxTotal)
         $header .= __("Message box size", "cartpaujpm").": ".$msgBoxSize." ".__("of", "cartpaujpm")." ".$msgBoxTotal."</p>";
