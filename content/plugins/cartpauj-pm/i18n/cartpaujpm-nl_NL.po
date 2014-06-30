@@ -1,0 +1,421 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cartpauj PM\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-11 19:00-0700\n"
+"PO-Revision-Date: 2014-06-30 23:34+0100\n"
+"Last-Translator: Cartpauj <cartpauj@prettylinkpro.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\\js\n"
+
+#: pm-class.php:55
+msgid "Messages"
+msgstr "Berichten "
+
+#: pm-class.php:57
+msgid "Login to view your messages"
+msgstr "Log in om je berichten te bekijken "
+
+#: pm-class.php:63
+msgid "Hi"
+msgstr "Hallo "
+
+#: pm-class.php:64 pm-class.php:739
+msgid "You have"
+msgstr "Je hebt "
+
+#: pm-class.php:64 pm-class.php:739
+msgid "new messages"
+msgstr "nieuwe berichten "
+
+#: pm-class.php:65
+msgid "There are"
+msgstr "Er zijn "
+
+#: pm-class.php:65 pm-class.php:740
+msgid "announcement(s)"
+msgstr "De aankondiging(en) "
+
+#: pm-class.php:66
+msgid "View Message Box"
+msgstr "Kijk Postvak IN "
+
+#: pm-class.php:145
+msgid "Options successfully saved"
+msgstr "Opties succesvol opgeslagen "
+
+#: pm-class.php:148
+msgid "Cartpauj PM Settings"
+msgstr "Cartpauj PM Instellingen "
+
+#: pm-class.php:152
+msgid "Setting"
+msgstr "Instelling"
+
+#: pm-class.php:152
+msgid "Value"
+msgstr "Waarde "
+
+#: pm-class.php:154
+msgid "Max messages a user can keep in box? (0 = Unlimited)"
+msgstr "Max berichten van een gebruiker kan in doos houden? (0 = onbeperkt) "
+
+#: pm-class.php:154
+msgid "Admins always have Unlimited"
+msgstr "Admins altijd Unlimited "
+
+#: pm-class.php:154 pm-class.php:155
+msgid "Default"
+msgstr "Standaard"
+
+#: pm-class.php:155
+msgid "Messages to show per page"
+msgstr "Berichten tonen per pagina "
+
+#: pm-class.php:155
+msgid "Do not set this to 0!"
+msgstr "Doe dit niet op 0! "
+
+#: pm-class.php:156
+msgid "Hide \"Cartpauj PM\" Branding Footer"
+msgstr "Verbergen \"Cartpauj PM\" Branding voettekst "
+
+#: pm-class.php:157 pm-class.php:221
+msgid "Save Options"
+msgstr "Opties opslaan "
+
+#: pm-class.php:160
+msgid "Setup Instructions"
+msgstr "Installatie-instructies "
+
+#: pm-class.php:161
+msgid "Create a new page."
+msgstr "Maak een nieuwe pagina. "
+
+#: pm-class.php:162
+msgid "Paste [cartpauj-pm] under the HTML tab of the page editor"
+msgstr "Plakken [cartpauj-pm] onder het tabblad HTML van de pagina-editor "
+
+#: pm-class.php:163
+msgid "Publish the page"
+msgstr "Publiceer de pagina "
+
+#: pm-class.php:208
+msgid "Your settings have been saved!"
+msgstr "Uw instellingen zijn opgeslagen! "
+
+#: pm-class.php:210
+msgid "Set your preferences below"
+msgstr "Stel hieronder uw voorkeuren "
+
+#: pm-class.php:215
+msgid "Allow others to send me messages?"
+msgstr "Anderen toestaan ​​mij berichten sturen?"
+
+#: pm-class.php:220
+msgid "Email me when I get new messages?"
+msgstr "E-mail mij wanneer ik nieuwe berichten te krijgen? "
+
+#: pm-class.php:271
+msgid "Create New Message"
+msgstr "Nieuwe bericht toevoeg"
+
+#: pm-class.php:273
+msgid "To"
+msgstr "Aan"
+
+#: pm-class.php:276 pm-class.php:338 pm-class.php:650 pm-class.php:668
+msgid "Subject"
+msgstr "Onderwerp "
+
+#: pm-class.php:278 pm-class.php:307 pm-class.php:655
+msgid "Message"
+msgstr "Bericht "
+
+#: pm-class.php:283 pm-class.php:357 pm-class.php:790
+msgid "Send Message"
+msgstr "Bericht verzenden "
+
+#: pm-class.php:290 pm-class.php:409 pm-class.php:416 pm-class.php:423
+msgid "Message Error"
+msgstr "Bericht fout "
+
+#: pm-class.php:291 pm-class.php:315 pm-class.php:410 pm-class.php:417
+#: pm-class.php:424 pm-class.php:444 pm-class.php:595
+msgid "Back To Message Box"
+msgstr "Terug naar de Postvak IN "
+
+#: pm-class.php:292
+msgid "You cannot send messages because your message box is full!"
+msgstr "Je kunt geen berichten verzenden omdat uw postvak IN vol is! "
+
+#: pm-class.php:306
+msgid "Message Thread"
+msgstr "Bericht draad "
+
+#: pm-class.php:307
+msgid "Sender"
+msgstr "Afzender"
+
+#: pm-class.php:314
+msgid "Privacy Error"
+msgstr "Privacy Fout "
+
+#: pm-class.php:316
+msgid "You do not have permission to view this message!"
+msgstr "U heeft geen toestemming om dit bericht te bekijken zijn! "
+
+#: pm-class.php:327 pm-class.php:328
+msgid "Re:"
+msgstr "Re: "
+
+#: pm-class.php:348
+msgid "Add Reply"
+msgstr "Reactie toevoegen "
+
+#: pm-class.php:402
+msgid "You must enter a valid recipient!"
+msgstr "U moet een geldige ontvanger in te voeren! "
+
+#: pm-class.php:404
+msgid "You must enter a valid subject!"
+msgstr "U moet een geldig onderwerp in te voeren! "
+
+#: pm-class.php:406
+msgid "You must enter some message content!"
+msgstr "Je moet een inhoud van het bericht te gaan! "
+
+#: pm-class.php:408
+msgid "You do not have permission to send this message!"
+msgstr "U heeft geen toestemming om dit bericht te verzenden! "
+
+#: pm-class.php:418
+msgid "This user does not want to receive messages!"
+msgstr "Deze gebruiker heeft geen berichten wilt ontvangen! "
+
+#: pm-class.php:425
+msgid "The Recipients Message Box Is Full!"
+msgstr "De Ontvangers Postvak IN is vol! "
+
+#: pm-class.php:443
+msgid "Message Sent"
+msgstr "Bericht verzonden "
+
+#: pm-class.php:445
+msgid "Your message was successfully sent!"
+msgstr "Uw bericht is succesvol verzonden! "
+
+#: pm-class.php:479
+msgid "You have received a new message from"
+msgstr "Je hebt een nieuw bericht van ontvangst "
+
+#: pm-class.php:479
+msgid "follow this link to view it"
+msgstr "volg deze link om het te bekijken "
+
+#: pm-class.php:482 pm-class.php:754
+msgid "New Message"
+msgstr "Nieuwe bericht"
+
+#: pm-class.php:506
+msgid "Your Messages"
+msgstr "Uw berichten "
+
+#: pm-class.php:510
+msgid "Page"
+msgstr "Pagina "
+
+#: pm-class.php:520
+msgid "Started By"
+msgstr "Gestart door "
+
+#: pm-class.php:521
+msgid "To: Subject"
+msgstr "Aan: Onderwerp "
+
+#: pm-class.php:522
+msgid "Last Reply By"
+msgstr "Laatste reactie door "
+
+#: pm-class.php:523 pm-class.php:537 pm-class.php:653
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: pm-class.php:528
+msgid "Unread"
+msgstr "Ongelezen"
+
+#: pm-class.php:530
+msgid "Read"
+msgstr "Gelezen"
+
+#: pm-class.php:537
+msgid "Are you sure?"
+msgstr "Weet je het zeker?"
+
+#: pm-class.php:546
+msgid "No Messages"
+msgstr "Geen berichten"
+
+#: pm-class.php:547
+msgid "Refresh Message Box"
+msgstr "Herlaad Postvak IN"
+
+#: pm-class.php:548
+msgid "Your message box is empty!"
+msgstr "Uw postvak IN is leeg!"
+
+#: pm-class.php:594
+msgid "Message Deleted"
+msgstr "Bericht verwijderd"
+
+#: pm-class.php:596
+msgid "Your message was successfully deleted!"
+msgstr "Uw bericht is succesvol verwijderd!"
+
+#: pm-class.php:616
+msgid "Announcement Added"
+msgstr "Aankondiging Toegevoegd"
+
+#: pm-class.php:617 pm-class.php:625
+msgid "Back To Announcements"
+msgstr "Terug naar Aankondigingen"
+
+#: pm-class.php:618
+msgid "The announcement was successfully added!"
+msgstr "De aankondiging werd succesvol toegevoegd!"
+
+#: pm-class.php:624
+msgid "Announcement Deleted"
+msgstr "Aankondiging verwijderd"
+
+#: pm-class.php:626
+msgid "The announcement was successfully deleted!"
+msgstr "De aankondiging werd succesvol verwijderd! "
+
+#: pm-class.php:632 pm-class.php:641 pm-class.php:753
+msgid "Announcements"
+msgstr "Aankondigingen"
+
+#: pm-class.php:637
+msgid "There are no announcements!"
+msgstr "Er zijn geen aankondigingen! "
+
+#: pm-class.php:651
+msgid "Date"
+msgstr "Datum "
+
+#: pm-class.php:666
+msgid "Add a new announcement below"
+msgstr "Voeg een nieuwe aankondiging hieronder "
+
+#: pm-class.php:673
+msgid "Submit"
+msgstr "Verzenden "
+
+#: pm-class.php:732 pm-class.php:741
+msgid "Unlimited"
+msgstr "Onbeperkt"
+
+#: pm-class.php:738
+msgid "Welcome"
+msgstr "Welkom"
+
+#: pm-class.php:740
+msgid "and"
+msgstr "en "
+
+#: pm-class.php:742
+msgid "Message box size"
+msgstr "Postvak IN groote"
+
+#: pm-class.php:742
+msgid "of"
+msgstr "van "
+
+#: pm-class.php:744
+msgid "Your Message Box Is Full!"
+msgstr "Uw Postvak IN is vol! "
+
+#: pm-class.php:752
+msgid "Message Box"
+msgstr "Postvak IN "
+
+#: pm-class.php:755
+msgid "Directory"
+msgstr "Adresboek"
+
+#: pm-class.php:756
+msgid "Settings"
+msgstr "Instellingen "
+
+#: pm-class.php:845
+msgid "You must be logged-in to view this page."
+msgstr "U moet ingelogd zijn om deze pagina te bekijken. "
+
+#: pm-class.php:861
+msgid "Bold"
+msgstr "Vet "
+
+#: pm-class.php:862
+msgid "Italic"
+msgstr "Cursief "
+
+#: pm-class.php:863
+msgid "Underline"
+msgstr "Onderstrepen "
+
+#: pm-class.php:864
+msgid "Strikethrough"
+msgstr "Doorhalen "
+
+#: pm-class.php:865
+msgid "Code"
+msgstr "Code "
+
+#: pm-class.php:866
+msgid "Quote"
+msgstr "Quote "
+
+#: pm-class.php:867
+msgid "List"
+msgstr "Lijst "
+
+#: pm-class.php:868
+msgid "List item"
+msgstr "Lijst-item "
+
+#: pm-class.php:869
+msgid "Link"
+msgstr "Link "
+
+#: pm-class.php:870
+msgid "Image"
+msgstr "Beeld "
+
+#: pm-class.php:871
+msgid "Email"
+msgstr "E-mail "
+
+#: pm-class.php:872
+msgid "Add Hex Color"
+msgstr "Voeg Hex Color "
+
+#: pm-class.php:873
+msgid "Embed"
+msgstr "Embedden "
+
+#: pm-main.php:54
+msgid "Cartpauj-PM Widget"
+msgstr "Cartpauj-PM Widget "
+
+#: js/search.php:23 .\js/search.php:23
+msgid "No Matches Found"
+msgstr "Geen resultaten gevonden "
