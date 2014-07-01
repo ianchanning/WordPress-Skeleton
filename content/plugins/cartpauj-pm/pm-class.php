@@ -326,7 +326,7 @@ if (!class_exists("cartpaujPM"))
       else
       {
         $error = "<h3>".__("Message Error", "cartpaujpm")."</h3>
-        <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
+        <p><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></p>";
         $this->notify = __("You cannot send messages because your message box is full!", "cartpaujpm");
         return $error;
       }
@@ -350,7 +350,7 @@ if (!class_exists("cartpaujPM"))
         if ($post->to_user != $user_ID && $post->from_user != $user_ID)
         {
           $error = "<h3>".__("Privacy Error", "cartpaujpm")."</h3>
-          <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
+          <p><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></p>";
           $this->notify = __("You do not have permission to view this message!", "cartpaujpm");
           return $error;
         }
@@ -468,21 +468,21 @@ if (!class_exists("cartpaujPM"))
         if ($from != $user_ID)
           $theError = __("You do not have permission to send this message!", "cartpaujpm");
         $error = "<h3>".__("Message Error", "cartpaujpm")."</h3>
-        <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
+        <p><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></p>";
         $this->notify = $theError;
         return $error;
       }
       if ($toUserOps['allow_messages'] != 'true')
       {
         $error = "<h3>".__("Message Error", "cartpaujpm")."</h3>
-        <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
+        <p><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></p>";
         $this->notify = __("This user does not want to receive messages!", "cartpaujpm");
         return $error;
       }
       if ($this->isBoxFull($to, $adminOps['num_messages'], $parentID))
       {
         $error = "<h3>".__("Message Error", "cartpaujpm")."</h3>
-        <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
+        <p><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></p>";
         $this->notify = __("The Recipients Message Box Is Full!", "cartpaujpm");
         return $error;
       }
@@ -534,7 +534,7 @@ if (!class_exists("cartpaujPM"))
       }
 
       $check = "<h3>".__("Message Sent", "cartpaujpm")."</h3>
-      <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
+      <p><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></p>";
       $this->notify = __("Your message was successfully sent!", "cartpaujpm");
 
       $this->sendEmail($to, $from);
@@ -637,7 +637,7 @@ if (!class_exists("cartpaujPM"))
       else
       {
         $empty = "<h3>".__("No Messages", "cartpaujpm")."</h3>
-        <h3><a href='".$this->pageURL."'>".__("Refresh Message Box", "cartpaujpm")."</a></h3>";
+        <p><a href='".$this->pageURL."'>".__("Refresh Message Box", "cartpaujpm")."</a></p>";
         $this->notify = __("Your message box is empty!", "cartpaujpm");
         return $empty;
       }
@@ -693,7 +693,7 @@ if (!class_exists("cartpaujPM"))
       }
 
       $deleted = "<h3>".__("Message Deleted", "cartpaujpm")."</h3>
-      <h3><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></h3>";
+      <p><a href='".$this->pageURL."'>".__("Back To Message Box", "cartpaujpm")."</a></p>";
       $this->notify = __("Your message was successfully deleted!", "cartpaujpm");
 
       return $deleted;
@@ -715,7 +715,7 @@ if (!class_exists("cartpaujPM"))
       if ($this->addAnnouncement()) //Adding a new announcement?
       {
         $announce = "<h3>".__("Announcement Added", "cartpaujpm")."</h3>
-        <h3><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></h3>";
+        <p><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></p>";
         $this->notify = __("The announcement was successfully added!", "cartpaujpm");
         return $announce;
       }
@@ -723,7 +723,7 @@ if (!class_exists("cartpaujPM"))
       if ($this->deleteAnnouncement()) //Deleting an announcement?
       {
         $announce = "<h3>".__("Announcement Deleted", "cartpaujpm")."</h3>
-        <h3><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></h3>";
+        <p><a href='".$this->actionURL."viewannouncements'>".__("Back To Announcements", "cartpaujpm")."</a></p>";
         $this->notify = __("The announcement was successfully deleted!", "cartpaujpm");
         return $announce;
       }
