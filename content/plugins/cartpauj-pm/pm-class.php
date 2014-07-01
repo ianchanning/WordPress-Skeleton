@@ -918,11 +918,14 @@ if (!class_exists("cartpaujPM"))
 
       $users = $this->get_users();
       $directory = "";
-
-      foreach($users as $u)
+	  $directory .= sprintf("<table><thead><tr><th>%s</th><th>%s</th></tr></thead>", __("Login", "cartpaujpm"), __("Send Message", "cartpaujpm"));
+      $directory .= "<tbody>";
+	  foreach($users as $u)
       {
-        $directory .= '<h3>'.$u->user_login.'</strong> - <a href="'.$this->actionURL.'newmessage&to='.$u->ID.'">'.__('Send Message', 'cartpaujpm').'</a></p>';
+        $directory .= '<tr><td>'.$u->user_login.'</td><td><a href="'.$this->actionURL.'newmessage&to='.$u->ID.'">'.__('Send Message', 'cartpaujpm').'</a></td></tr>';
       }
+      $directory .= "</tbody>";
+      $directory .= "</table>";
       return $directory;
     }
 
